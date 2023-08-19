@@ -1,0 +1,72 @@
+.resume-container {
+  grid-template-columns: repeat(2, 1fr);
+}
+.resume-title {
+  text-align: center;
+  border-bottom: 1px solid var(--title-color);
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+.resume-item {
+  padding: 15px 30px;
+  border-bottom: 1px solid var(--title-color);
+  position: relative;
+}
+
+.resume-item:not(:first-child) {
+  border-right: 1px solid var(--title-color);
+}
+
+.resume-data {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.show-info {
+  max-height: 500px;
+}
+
+.resume-item-title {
+  margin-block: 1rem;
+  cursor: pointer;
+}
+
+.resume-icon {
+  position: absolute;
+  font-size: var(--h2);
+  right: -24px;
+  bottom: -24px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.2rem;
+  background-color: var(--container-color);
+  border: 2px solid var(--title-color);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 3s;
+}
+
+.resume-data-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.resume-data-title {
+  font-family: var(--second-font);
+  font-size: var(--h6);
+}
+
+.resume-data-date {
+  font-size: var(--tiny-font);
+  font-weight: 700;
+}
+
+.resume-description {
+  font-size: var(--tiny-font);
+  margin-bottom: 0.5rem;
+}

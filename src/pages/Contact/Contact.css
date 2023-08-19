@@ -1,0 +1,127 @@
+.contact-container {
+  grid-template-columns: 5fr 7fr;
+}
+
+.contact-content-item {
+  position: relative;
+  padding-left: 8rem;
+  margin-bottom: 2.5rem;
+  text-transform: capitalize;
+}
+
+.contact-content-icon {
+  position: absolute;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: var(--container-color);
+  border: 1px solid var(--title-color);
+  display: grid;
+  place-items: center;
+  font-size: var(--h6);
+}
+
+.contact-content-icon::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  left: 100%;
+  background-color: var(--title-color);
+  border-radius: 4rem;
+}
+
+.contact-content-title {
+  font-family: var(--second-font);
+  font-size: var(--h4);
+}
+
+.contact-content-subtitle {
+  font-size: var(--h5);
+}
+/* =============== form ====================== */
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.contact-form-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  text-transform: capitalize;
+}
+
+.contact-form-item label span {
+  color: var(--first-color);
+}
+.contact-form-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  text-transform: capitalize;
+}
+
+.contact-input {
+  background-color: var(--container-color);
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 3rem;
+  padding: 1.2rem;
+  color: var(--title-color);
+  font-size: var(--h5);
+  text-transform: capitalize;
+}
+
+.contact-textarea {
+  height: 200px;
+  resize: none;
+  text-transform: capitalize;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 2rem;
+  text-transform: uppercase;
+}
+
+.submit span {
+  text-transform: capitalize;
+}
+
+.submit-btn {
+  position: relative;
+  font-family: var(--first-font);
+  background-color: var(--container-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background-color: var(--first-color);
+  z-index: -1;
+  transform: scale(0.5);
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.submit-btn:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.contact-form-item:nth-child(3),
+.contact-form-item:nth-child(4),
+.submit {
+  grid-column: 1/-1;
+}

@@ -1,0 +1,126 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.scroll-nav {
+  position: fixed;
+  animation: scrollNav 0.8s var(--transition) 0s forwards;
+  background-color: var(--body-color-alt);
+  padding: 1.4rem 1.4rem 0.8rem;
+}
+
+.scroll-nav .nav-content {
+  height: 100vh;
+}
+
+@keyframes scrollNav {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  color: var(--title-color);
+  cursor: pointer;
+  font-size: var(--h3);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-shadow: 2px 2px hsl(0, 0%, 0%), -2px 2px hsl(0, 0%, 0%),
+    2px -2px hsl(0, 0%, 0%), -2px -2px hsl(0, 0%, 0%), 5px 5px 0 rgb(0 0 0/ 20%);
+}
+
+.nav-btns {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.toggle-btn {
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  margin-top: 0.4rem;
+}
+
+.sun {
+  font-size: var(--h4);
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--title-color);
+  margin-bottom: 0.7rem;
+  transition: all 0.2s;
+}
+
+.close-btn span:first-child {
+  transform: rotate(50deg) translate(5px, 4px);
+}
+
+.close-btn span:last-child {
+  transform: rotate(-50deg) translate(5px, -5px);
+}
+.nav-content {
+  position: fixed;
+  overflow: hidden;
+  right: 0;
+  width: 0;
+  inset-block: 0;
+  background-color: var(--body-color-alt);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s var(--transition);
+}
+
+.show-nav {
+  width: 450px;
+}
+
+.nav-list {
+  margin-bottom: 1rem;
+  font-size: var(--h6);
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.nav-link {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-link:hover,
+.active {
+  color: var(--first-color);
+}
+
+.nav-social {
+  padding-right: 1.6rem;
+}
+
+.nav-shape {
+  position: absolute;
+  top: -7%;
+  left: -19%;
+  filter: invert(1);
+  width: 200px;
+  height: 200px;
+}
