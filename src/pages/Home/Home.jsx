@@ -1,77 +1,92 @@
+import React from "react";
+
+import { FaTelegram, FaGithub, FaInstagram } from "react-icons/fa";
+
 import pdf from "../../assets/my.pdf";
-import myImg from "../../assets/me.png";
+import me from "../../assets/me.png";
 import shape1 from "../../assets/shape-1.png";
 import shape2 from "../../assets/shape-2.png";
 
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-
 import "./Home.css";
-import React from "react";
 
 const Home = () => {
   return (
     <>
-      <section className="home" id="home">
-        <div className="home-container container grid">
-          <div className="home-content">
-            <div className="home-data">
-              <h4 className="home-subtitle">
-                HELLO , <span>MY NAME IS</span>
-              </h4>
-              <h1 className="home-title">
-                <span>MOHSEN</span> FARAMARZI
-              </h1>
-              <h4 className="home-job">
-                I AM <span>WEB DEVELOPER</span>
-              </h4>
-              <p className="home-description">
-                I like to talk with you about our unique. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Vero, saepe! Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. In, ea.
-              </p>
+      <section className="section home" id="home">
+        <div className="home-container container">
+          <div className="home-info">
+            <h3 className="home-uptitle space-letter">
+              hello , <span>my name is</span>
+            </h3>
+            <h1 className="home-title">
+              mohsen<span>faramarzi</span>
+            </h1>
+            <h3 className="home-subtitle">
+              i am <span>web developer</span>
+            </h3>
+          </div>
+          <div className="home-img-wrapper">
+            <div className="home-banner">
+              <img src={me} alt="Home Image" className="home-img" />
             </div>
-            <div className="home-social">
-              <a href="#" className="home-link">
-                <FaGithub />
+            <div className="home-banner-box btn box-1">
+              <span>2</span>
+              <span>+</span>
+              <span>
+                years of <div>experience</div>
+              </span>
+            </div>
+            <div className="home-banner-box btn box-2">
+              <span>10</span>
+              <span>
+                completed<div>projects</div>
+              </span>
+            </div>
+            <img
+              src={shape1}
+              alt="Home Shape"
+              className="shape home-shape shape1"
+            />
+            <img
+              src={shape2}
+              alt="Home Shape"
+              className="shape home-shape shape2"
+            />
+            <img
+              src={shape2}
+              alt="Home Shape"
+              className="shape home-shape shape3"
+            />
+          </div>
+          <div className="home-data">
+            <p className="home-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+              nulla facere, consectetur tempore aliquam quos esse quis eius eum
+              numquam accusamus.
+            </p>
+            <div className="social home-social">
+              <a href="#" className="social-link">
+                <FaTelegram className="social-icon"></FaTelegram>
               </a>
-              <a href="#" className="home-link">
-                <FaInstagram />
+              <a href="#" className="social-link">
+                <FaGithub className="social-icon"></FaGithub>
               </a>
-              <a href="#" className="home-link">
-                <FaWhatsapp />
+              <a href="#" className="social-link">
+                <FaInstagram className="social-icon"></FaInstagram>
               </a>
             </div>
             <div className="home-btns">
-              <a href={pdf} download="" className="btn">
-                Download PDF
+              <a href={pdf} download className="btn home-btn">
+                download cv
               </a>
-              <a href="#" className="hero-link">
-                My Skills
+              <a href="#skills" className="home-skills-btn space-letter">
+                my skills
               </a>
             </div>
           </div>
-
-          <div className="home-img">
-            <img src={myImg} alt="Me" />
-            <div className="experience btn">
-              <span className="number">1</span>
-              <span className="plus">+</span>
-              <span className="data">
-                years of <span>experience</span>
-              </span>
-            </div>
-            <div className="complete btn">
-              <span className="number">12</span>
-              <span className="data">
-                complete <span>projects</span>
-              </span>
-            </div>
-            <img src={shape1} className="shape shape1" alt="" />
-            <img src={shape2} className="shape shape2" alt="" />
-            <img src={shape2} className="shape shape3" alt="" />
-          </div>
+        </div>
+        <div className="deco left-deco home-deco">
+          <img src={shape1} alt="" className="shape deco-shape" />
         </div>
       </section>
     </>

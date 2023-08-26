@@ -1,29 +1,27 @@
 import React, { useState } from "react";
 
-import "./Portfolio.css";
-
-const List = ({ allNavLinks, filterLink }) => {
+const Menu = ({ categories, filterItem }) => {
   const [activeLink, setActiveLink] = useState(0);
   return (
     <>
-      <div className="portfolio-list">
-        {allNavLinks.map((category, index) => {
+      <div className="category-list">
+        {categories.map((name, index) => {
           return (
             <a
-              href=""
+              href="#"
               className={
                 activeLink === index
-                  ? "portfolio-link active-link"
-                  : "portfolio-link"
+                  ? "category-name active-link"
+                  : "category-name cat"
               }
               key={index}
               onClick={(e) => {
                 e.preventDefault();
                 setActiveLink(index);
-                filterLink(category);
+                filterItem(name);
               }}
             >
-              {category}
+              {name}
             </a>
           );
         })}
@@ -32,4 +30,4 @@ const List = ({ allNavLinks, filterLink }) => {
   );
 };
 
-export default List;
+export default Menu;

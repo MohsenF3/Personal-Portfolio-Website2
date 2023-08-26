@@ -1,36 +1,50 @@
 import React, { useState } from "react";
 
-import { projects } from "../../Data";
-import List from "./List.jsx";
+import Menu from "./Menu";
 import Items from "./Items";
+
+import "./Portfolio.css";
+
+import { projects } from "../../Data";
 
 import { AnimatePresence } from "framer-motion";
 
-const allNavLinks = ["all", ...new Set(projects.map((link) => link.category))];
+import shape1 from "../../assets/shape-1.png";
+
+const allCategories = [
+  "all",
+  ...new Set(projects.map((item) => item.category)),
+];
 
 const Portfolio = () => {
-  const [navList, setNavList] = useState(allNavLinks);
-  const [portfolioItems, setPortfolioItems] = useState(projects);
-
-  const filterLink = (category) => {
+  const [categories, setCategories] = useState(allCategories);
+  const [items, setItems] = useState(projects);
+  const filterItem = (category) => {
     if (category === "all") {
-      return setPortfolioItems(projects);
+      return setItems(projects);
     }
-    const filterItem = projects.filter((item) => item.category === category);
-    setPortfolioItems(filterItem);
+    const filter = projects.filter((item) => item.category === category);
+    setItems(filter);
   };
   return (
     <>
-      <section className="section portfolio" id="work">
-        <h1 className="section-title">Portfolio</h1>
+      <section className="section portfolio" id="portfolio">
+        <h1 className="section-title space-letter">portfolio</h1>
         <h3 className="section-subtitle">
           my<span>cases</span>
         </h3>
-        <List allNavLinks={navList} filterLink={filterLink} />
+        <Menu categories={categories} filterItem={filterItem} />
         <div className="portfolio-container container grid">
-          <AnimatePresence initial={false}>
-            <Items portfolioItems={portfolioItems} />
+          <AnimatePresence initial="false">
+            <Items projects={items} />
           </AnimatePresence>
+        </div>
+        <div className="deco right-deco">
+          <img
+            src={shape1}
+            alt=""
+            className="shape deco-shape portfolio-shape"
+          />
         </div>
       </section>
     </>

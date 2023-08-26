@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import Header from "./pages/Header/Header";
-import Home from "./pages/Home/Home";
+import Home from "./Pages/Home/Home";
 import Services from "./pages/Services/Services";
 import Skills from "./pages/Skills/Skills";
 import Portfolio from "./pages/Portfolio/Portfolio";
@@ -16,17 +16,19 @@ import Footer from "./pages/Footer/Footer";
 const App = () => {
   return (
     <>
-      <Header />
-      <Home />
-      <Services />
-      <Skills />
-      <Portfolio />
-      <Resume />
-      <Testimonial />
-      <Pricing />
-      <Blog />
-      <Contact />
-      <Footer />
+      <div className="main">
+        <Header />
+        <Home />
+        <Services />
+        <Skills />
+        <Portfolio />
+        <Resume />
+        <Testimonial />
+        <Pricing />
+        <Blog />
+        <Contact />
+        <Footer />
+      </div>
     </>
   );
 };

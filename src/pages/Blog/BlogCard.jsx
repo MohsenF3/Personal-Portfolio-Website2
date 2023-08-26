@@ -2,32 +2,31 @@ import React, { useState } from "react";
 
 import { FaArrowRight } from "react-icons/fa";
 
-const BlogCard = ({ id, date, title, img, description }) => {
-  const [showDesc, setShowDesc] = useState(false);
+const BlogCard = (props) => {
+  const truncLength = 100;
+  const [isShow, setShowHide] = useState(false);
   return (
     <>
-      <div className="blog-card" key={id}>
-        <span className="blog-date">{date}</span>
-        <h2 className="blog-title">{title}</h2>
-        <p
-          className={
-            showDesc ? "blog-description show-extra" : "blog-description"
-          }
-        >
-          {description}
+      <div className="blog-card card">
+        <span className="blog-card-date">{props.date}</span>
+        <h3 className="blog-card-title">{props.title}</h3>
+
+        <p>
+          {" "}
+          {isShow
+            ? props.description
+            : props.description.slice(0, truncLength)}{" "}
+          {isShow ? "" : "..."}
+          <button
+            className="card-pricing blog-card-btn"
+            onClick={() => setShowHide(!isShow)}
+          >
+            {isShow ? "Read Less" : "Read more"}
+            <FaArrowRight className="pricing-icon"></FaArrowRight>
+          </button>
         </p>
-        <a
-          href="#"
-          className="blog-btn"
-          onClick={(e) => {
-            e.preventDefault();
-            setShowDesc(!showDesc);
-          }}
-        >
-          {showDesc ? "read less" : "read more"}
-          <FaArrowRight className="blog-btn-icon"></FaArrowRight>
-        </a>
-        <img src={img} alt="" className="blog-img" />
+
+        <img src={props.img} alt="Blog Image" className="blog-card-img" />
       </div>
     </>
   );

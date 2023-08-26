@@ -1,0 +1,269 @@
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 78.25rem;
+  }
+  .deco:not(.deco.nav-deco) {
+    display: none;
+  }
+  .home-img-wrapper {
+    right: 4%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 65.625rem;
+  }
+  .home-container {
+    padding-top: 7rem;
+  }
+  .home-info,
+  .home-data {
+    text-align: center;
+  }
+  .home-info {
+    margin-bottom: 8rem;
+  }
+  .home-data {
+    margin-inline: auto;
+  }
+  .home-img-wrapper {
+    position: relative;
+    margin-inline: auto;
+    transform: initial;
+    margin-bottom: 4rem;
+    right: initial;
+  }
+  .home-social {
+    justify-content: center;
+  }
+  .skills-container,
+  .portfolio-container,
+  .pricing-container,
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 53.125rem;
+  }
+  .home-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4rem;
+  }
+  .home-skills-btn {
+    padding-left: 0;
+  }
+  .home-skills-btn::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -230%;
+    width: 2px;
+    height: 2.6rem;
+  }
+  .resume-container {
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 53px;
+    --h1: 35px;
+    --h2: 28px;
+    --h3: 22px;
+    --h4: 18px;
+    --h5: 15px;
+    --h6: 14px;
+    --tiny: 12px;
+  }
+  .nav-link {
+    font-size: var(--h3);
+  }
+  .container {
+    max-width: 40.625rem;
+  }
+  .shape2 {
+    left: -15%;
+    bottom: 7%;
+  }
+  .shape2,
+  .shape3 {
+    width: 130px;
+    height: 130px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets {
+    max-width: 4.5rem;
+  }
+  .contact-item {
+    column-gap: 2rem;
+  }
+  .contact-icon::before {
+    width: 25px;
+  }
+  .submit-btn {
+    text-wrap: noWrap;
+  }
+  .footer-container {
+    padding-block: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 31.1rem;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets {
+    max-width: 5.5rem;
+  }
+
+  .skills-container,
+  .portfolio-container,
+  .pricing-container,
+  .blog-container,
+  .contact-container,
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.1rem;
+  }
+  .badge {
+    top: 33.3%;
+  }
+  .testimonial-card-img,
+  .portfolio-card-banner,
+  .blog-card-img {
+    height: 260px;
+  }
+  .testimonial-card-icon {
+    left: 4%;
+    width: 70px;
+    top: 4%;
+    height: 70px;
+  }
+  .nav-menu {
+    width: 100%;
+  }
+  .home-title {
+    font-size: var(--h1);
+  }
+  .home-img {
+    height: 41.875rem;
+  }
+
+  .home-banner-box {
+    padding: 0.6rem 1rem;
+    font-size: var(--tiny);
+    column-gap: 0.3rem;
+  }
+  .box-1 {
+    left: -3%;
+    bottom: 20%;
+  }
+  .box-2 {
+    right: -4%;
+    bottom: 1%;
+  }
+  .shape2,
+  .shape3 {
+    width: 100px;
+    height: 100px;
+  }
+  .home-description {
+    font-size: var(--h6);
+  }
+}
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 24.6rem;
+  }
+
+  .category-list {
+    column-gap: 0.7rem;
+  }
+  .cat {
+    font-size: var(--h5);
+  }
+  .home-title {
+    letter-spacing: 0.01rem;
+  }
+  .home-title span {
+    margin-left: 0.5rem;
+  }
+  .home-img {
+    height: 34.375rem;
+  }
+
+  .btn {
+    text-wrap: nowrap;
+  }
+  .contact-submit {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 1rem;
+  }
+  .section-title {
+    font-size: var(--h2);
+  }
+  .category-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+    margin-left: 2.5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  :root {
+    --big-font-size: 50px;
+    --h1: 31px;
+    --h2: 26px;
+    --h3: 20px;
+    --h4: 15px;
+    --h5: 13px;
+    --h6: 12px;
+    --tiny: 11px;
+  }
+
+  .resume-card-icon {
+    right: -7px;
+  }
+  .container {
+    max-width: 21.75rem;
+  }
+  .testimonial-card-img,
+  .portfolio-card-banner,
+  .blog-card-img {
+    height: 200px;
+  }
+  .home-info {
+    margin-bottom: 6rem;
+  }
+  .home-description {
+    font-size: var(--tiny);
+  }
+  .home-img {
+    height: 30.375rem;
+  }
+  .home-skills-btn::before {
+    top: -300%;
+  }
+  .box-1 {
+    left: -8%;
+    bottom: 15%;
+    font-size: var(--tiny);
+    padding: 0.3rem 1rem;
+  }
+  .box-2 {
+    right: -6%;
+    font-size: var(--tiny);
+    padding: 0.3rem 1rem;
+  }
+}

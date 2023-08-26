@@ -1,20 +1,22 @@
 import React from "react";
 
 import { FaCheck, FaArrowRight } from "react-icons/fa";
-import shape1 from "../../assets/shape-2.png";
+
+import shape1 from "../../assets/shape-1.png";
+import shape2 from "../../assets/shape-2.png";
 
 import "./Pricing.css";
 
 const Pricing = () => {
   return (
     <>
-      <section className="section pricing" id="pricing">
-        <h1 className="section-title">pricing</h1>
+      <section className="section " id="pricing">
+        <h1 className="section-title space-letter">pricing</h1>
         <h3 className="section-subtitle">
           my<span>price board</span>
         </h3>
         <div className="pricing-container container grid">
-          <div className="pricing-card">
+          <div className="pricing-card card">
             <span className="pricing-subtitle">hourley basis</span>
             <h3 className="pricing-price">
               39 <span>$</span> <em> hour</em>
@@ -41,13 +43,13 @@ const Pricing = () => {
                 <del>photography</del>
               </li>
             </ul>
-            <a href="#" className="btn pricing-btn">
-              start project
-              <FaArrowRight className="btn-icon"></FaArrowRight>
+            <a href="#pricing" className="btn pricing-btn">
+              see pricing
+              <FaArrowRight className="pricing-card-icon"></FaArrowRight>
             </a>
-            <img src={shape1} alt="" className="pricing-shape shape" />
+            <img src={shape2} alt="" className="pricing-shape shape" />
           </div>
-          <div className="pricing-card card-two">
+          <div className="pricing-card card card-two">
             <span className="pricing-subtitle">freelancing</span>
             <h3 className="pricing-price">
               259 <span>$</span> <em> week</em>
@@ -75,13 +77,13 @@ const Pricing = () => {
                 <del>photography</del>
               </li>
             </ul>
-            <a href="#" className="btn pricing-btn">
-              start project
-              <FaArrowRight className="btn-icon"></FaArrowRight>
+            <a href="#pricing" className="btn pricing-btn">
+              see pricing
+              <FaArrowRight className="pricing-card-icon"></FaArrowRight>
             </a>
-            <img src={shape1} alt="" className="pricing-shape shape" />
+            <img src={shape2} alt="" className="pricing-shape shape" />
           </div>
-          <div className="pricing-card">
+          <div className="pricing-card card">
             <span className="pricing-subtitle">full time</span>
             <h3 className="pricing-price">
               1,249 <span>$</span> <em> month</em>
@@ -110,13 +112,20 @@ const Pricing = () => {
                 <span className="pricing-item">photography</span>
               </li>
             </ul>
-            <a href="#" className="btn pricing-btn">
-              start project
-              <FaArrowRight className="btn-icon"></FaArrowRight>
+            <a href="#pricing" className="btn pricing-btn">
+              see pricing
+              <FaArrowRight className="pricing-card-icon"></FaArrowRight>
             </a>
-            <img src={shape1} alt="" className="pricing-shape shape" />
+            <img src={shape2} alt="" className="pricing-shape shape" />
           </div>
-          <span className="popular">popular</span>
+          <span className="badge space-letter">popular</span>
+        </div>
+        <div className="deco left-deco">
+          <img
+            src={shape1}
+            alt=""
+            className="shape deco-shape pricing-deco-shape"
+          />
         </div>
       </section>
     </>

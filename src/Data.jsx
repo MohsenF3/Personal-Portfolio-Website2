@@ -304,7 +304,7 @@ export const blog = [
     date: "october 31 , 2023",
     title: "the main things for the designer",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolores natus error, cum quaerat, exercitationem nulladistinctio sint voluptatibus qui nihil voluptatem inventore. Quiaratione inventore culpa optio illo nobis totam, a impedi...necessitatibus veritatis quidem rem obcaecati sit asperioresperferendis at, maiores rerum nulla! Non voluptatem, cupiditateaccusantium nesciunt nulla ipsa tempore corporis, enim repellendusdebitis, ratione sed vero?",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolores natus error, cum quaerat, exercitationem nulladistinctio sint voluptatibus qui nihil voluptatem inventore. Quiaratione inventore culpa optio illo nobis totam, a impedi...necessitatibus veritatis quidem rem obcaecati sit asperioresperferendis at.",
     img: blog1,
   },
   {
@@ -312,7 +312,7 @@ export const blog = [
     date: "october 20 , 2023",
     title: "follow your own design process",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolores natus error, cum quaerat, exercitationem nulladistinctio sint voluptatibus qui nihil voluptatem inventore. Quiaratione inventore culpa optio illo nobis totam, a impedi...necessitatibus veritatis quidem rem obcaecati sit asperioresperferendis at, maiores rerum nulla! Non voluptatem, cupiditateaccusantium nesciunt nulla ipsa tempore corporis, enim repellendusdebitis, ratione sed vero?",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolores natus error, cum quaerat, exercitationem nulladistinctio sint voluptatibus qui nihil voluptatem inventore. Quiaratione inventore culpa optio illo nobis totam, a impedi...necessitatibus veritatis quidem rem obcaecati sit asperioresperferendis at.",
     img: blog2,
   },
   {
@@ -320,7 +320,13 @@ export const blog = [
     date: "november 28 , 2020",
     title: "useability secrets to create better interfaces",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolores natus error, cum quaerat, exercitationem nulladistinctio sint voluptatibus qui nihil voluptatem inventore. Quiaratione inventore culpa optio illo nobis totam, a impedi...necessitatibus veritatis quidem rem obcaecati sit asperioresperferendis at, maiores rerum nulla! Non voluptatem, cupiditateaccusantium nesciunt nulla ipsa tempore corporis, enim repellendusdebitis, ratione sed vero?",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolores natus error, cum quaerat, exercitationem nulladistinctio sint voluptatibus qui nihil voluptatem inventore. Quiaratione inventore culpa optio illo nobis totam, a impedi...necessitatibus veritatis quidem rem obcaecati sit asperioresperferendis at.",
     img: blog3,
   },
 ];
+
+{
+  /* <div className="deco right-deco">
+  <img src={shape1} alt="" className="shape deco-shape" />
+</div> */
+}

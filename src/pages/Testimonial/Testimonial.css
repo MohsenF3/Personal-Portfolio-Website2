@@ -1,89 +1,33 @@
-.testimonial-container {
-  text-align: center;
-}
 .testimonial-card {
-  background-color: var(--container-color);
-  padding: 30px;
-  border-radius: 1rem;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  cursor: grab;
+  padding: 25px;
 }
-
 .testimonial-header {
   position: relative;
 }
-
-.testimonial-icon {
+.testimonial-card-icon {
   position: absolute;
-  left: -1px;
-  width: 60px;
-  height: 60px;
-  background-color: var(--container-color);
-  border-radius: 0 0 1rem 0;
-}
-
-.testimonial-img {
-  height: 200px;
-  width: 100%;
+  left: 6%;
+  border-bottom-right-radius: 1rem;
+  width: 50px;
+  height: 50px;
+  background-color: var(--back-color);
   object-fit: cover;
+}
+
+.testimonial-card-img {
   border-radius: 1rem;
-  vertical-align: middle;
-}
-
-.testimonial-description {
-  margin-block: 2rem 4rem;
-  font-size: var(--h5);
-}
-
-.testimonial-name {
-  font-size: var(--tiny-font);
-}
-
-.testimonial-shape {
-  position: absolute;
-  width: 120px;
-  filter: invert(1);
-  right: -5%;
-  bottom: -5%;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets {
-  width: auto;
-  display: inline-block;
-  position: relative;
-}
-
-.swiper-horizontal > .swiper-pagination-bullets::before {
-  content: "";
-  position: absolute;
-  height: 2px;
   width: 100%;
-  right: 0;
-  top: 50%;
-  background-color: var(--title-color);
-  z-index: -1;
+  height: 200px;
+  object-fit: cover;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  border: 2px solid var(--title-color);
-  background-color: var(--container-color);
-  opacity: 1;
-  z-index: 100;
-  margin: 0;
-  transition: all 0.3s;
+.testimonial-card-description {
+  margin-block: 1.5rem 4rem;
 }
 
-.swiper-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet:not(:last-child) {
-  margin-right: 1rem;
+.testimonial-card-author {
+  font-size: var(--h6);
 }
-
-.swiper-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet-active {
-  transform: scale(1.8);
-  background-color: var(--first-color);
+.testimonial-card-name {
+  color: var(--title-color);
 }

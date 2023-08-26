@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 
-const ResumeCard = (props) => {
-  const [showInfo, setShowInfo] = useState(false);
+const ResumeCard = ({ title, subTitle, date, description }) => {
+  const [showHidden, setShowHidden] = useState(false);
   return (
     <>
-      <div className="resume-item">
+      <div className="resume-card">
         <div
-          className="resume-item-header"
-          onClick={() => setShowInfo(!showInfo)}
+          className="resume-card-header"
+          onClick={() => setShowHidden(!showHidden)}
         >
-          <h3 className="resume-item-title">{props.title}</h3>
-          <span className="resume-icon">{showInfo ? "+" : "-"}</span>
+          <h3 className="resume-card-title">{title}</h3>
+          <div className="resume-card-icon">{showHidden ? "-" : "+"}</div>
         </div>
-        <div className={`${showInfo ? "show-info" : ""} resume-data`}>
-          <div className="resume-data-content">
-            <h4 className="resume-data-title">{props.subtitle}</h4>
-            <span className="resume-data-date">{props.date}</span>
+        <div
+          className={`resume-card-hidden ${showHidden ? "show-hidden" : ""}`}
+        >
+          <div className="resume-card-info">
+            <h4 className="resume-card-subtitle">{subTitle}</h4>
+            <span className="resume-card-date">{date}</span>
           </div>
-          <p className="resume-description">{props.description}</p>
+          <p className="resume-card-description">{description}</p>
         </div>
       </div>
     </>
